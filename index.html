@@ -1,79 +1,111 @@
 <!doctype html>
 <html>
-    <head>
+
+<head>
     <meta charset="utf-8">
     <title>AboutJ</title>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.scrolling-parallax.js"></script>
     <style>
-        @font-face{
+        @font-face {
+            font-family: US;
+            src: url(font/UtopiaStd-Subh.otf);
+        }
+
+        @font-face {
             font-family: PC;
             src: url(font/PrintClearlyFont/PrintClearly_TT.ttf);
         }
-        @font-face{
-            font-family: PB;
-            src: url(font/PrintClearlyFont/PrintBold_TT.ttf);
+
+        @font-face {
+            font-family: ch1;
+            src: url(font/NotoSansKannada-Bold.ttf);
         }
+
+        @font-face {
+            font-family: ch2;
+            src: url(font/SourceHanSansTC-ExtraLight.otf);
+        }
+
     </style>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        
+
+        /*<a>去除連結底線*/
+        a,
+        a:link,
+        a:visited {
+            color: #fff;
+            text-decoration: none;
+        }
+
         .bodyColor {
             background-color: #000;
         }
 
-/*header*/
+        /******************************HEADER******************************/
+
+        /*為了"/"出現時不影響到其他版面*/
+        .logoBox {
+            height: 80px;
+        }
+
+
+
         .logo {
             width: 200px;
             margin-left: 50px;
             line-height: 100px;
             font-size: 25px;
             color: #fff;
-            font-family: PC;
-            cursor: pointer;    /*修改屬標->手指*/
-            
+            font-family: US;
+            /*修改屬標->手指*/
+            cursor: pointer;
         }
-        
-        .logo span{
-            display:inline-block;
-        }
-        
-        .logo:hover .logo1{
-            transform: translate(-0.7px,-2px);
-            transition: 0.7s;
-        }
-        
-        .logo:hover .logo2{
-            transform: translate(0.2px,2px);
-            transition: 0.7s;
-            color: red;
+
+        .logo2 {
             font-size: 30px;
         }
-        
-        .logo:hover .logo1:after{
-            opacity: 1;
-            right: -12px;
-            transform: scale(5,5);
-            
+
+        .logo span {
+            display: inline-block;
         }
-        
+
+        .logo:hover .logo1 {
+            transform: translate(-0.7px, -10px);
+            transition: 0.7s;
+        }
+
+        .logo:hover .logo2 {
+            transform: translate(15px, 2px);
+            transition: 0.7s;
+            color: red;
+            font-size: 40px;
+        }
+
+        .logo:hover .logo1:after {
+            opacity: 1;
+            right: 0px;
+            transform: scale(3, 3);
+        }
+
         .logo1:after {
             content: '/';
             position: absolute;
             opacity: 1;
-            right: -12px;
-            transition-duration: 1.5s;
+            right: 0px;
+            transition-duration: 1s;
             transition-property: all;
             transition-timing-function: ease;
-            transition-delay: 0.7s;
-            transform: scale(1,1);
+            transition-delay: 0s;
+            transform: scale(0, 0);
         }
-        
+
         .listBox {
-            margin-top: 20px;
+            margin-top: 10px;
             color: #fff;
             background-color: #202020;
             transition-duration: 0.2s;
@@ -82,38 +114,36 @@
             transition-delay: 0s;
         }
 
-        .listBox:hover {
+        .listBox:hover a {
             color: dimgray;
         }
 
         .list {
-            display: flex;
             margin-left: 50px;
             width: 33%;
-            list-style-type: none;    /*去除項目符號*/
-            justify-content: flex-start;
+            /*去除項目符號*/
+            list-style-type: none;
         }
 
         .list>li {
-            width: 20%;
-            margin-top: 5px;
-            cursor: pointer;    /*修改屬標->手指*/
-            transition-duration: 0.2s;
-            transition-property: color;
-            transition-timing-function: ease;
-            transition-delay: 0s;
+            display: inline;
+            margin: 10px 20px 0px;
+            /*修改屬標->手指*/
+            cursor: pointer;
             font-family: PC;
-            font-size: 18px;
+            font-size: 20px;
+            line-height: 30px;
         }
 
-        .list>li:hover {
+        .list>li:hover a {
             color: #fff;
+            transition: 0.2s;
         }
 
-/*article*/
+        /******************************MAIN******************************/
         main {
             background-color: #202020;
-            height: 600px;
+            height: 800px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -123,53 +153,304 @@
             color: #fff;
             font-size: 80px;
             width: 50%;
-            margin-left: 10%;
-            font-family: AverBold;
+            font-family: US;
+            text-align: center;
         }
-        
-        .welcome>span{
-            font-size: 25px;
-            width: 50%;
-            margin:auto;
+
+        .welcome span {
+            font-size: 30px;
+            font-family: PC;
+            text-align: center;
         }
 
         .asideImg {
             width: 50%;
-            height: 600px;
         }
-        div>img{
+
+        div>img {
             overflow: hidden;
         }
+
+        /******************************ABOUT******************************/
+        .about {
+            width: auto;
+            
+        }
+
+        .aboutA {
+            background-image: url(img/about1.jpg);
+            background-position: center;
+            width: 1600px;
+            height: 900px;
+            margin: 80px auto;
+            border: double #fff 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .aboutA_btn {
+            width: 200px;
+            height: 80px;
+            margin: auto auto;
+            border: solid 5px aliceblue;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 80px;
+            text-align: center;
+            font-family: PC;
+            cursor: pointer;
+        }
+
+        .aboutA_btn:hover {
+            background-color: aliceblue;
+            border: solid 5px aliceblue;
+            transition: 0.3s;
+        }
+
+        .aboutA_btn:hover a {
+            color: #112032;
+            transition: 0.3s;
+        }
+
+        .aboutA_span {
+            width: auto;
+            margin: 0px auto auto;
+            color: aliceblue;
+            font-family: US;
+            font-size: 15px;
+        }
+        
+        .aboutB_box{
+            height: 900px;
+            display: flex;
+        }
+
+        .aboutB {
+            background-color: #202020;
+            width: 1600px;
+            height: 800px;
+            margin: 80px auto;
+            display: flex;
+            align-items: center;
+            color: aliceblue;
+            font-family: ch2;
+            letter-spacing: 0.25em;
+            position: relative;
+        }
+        
+        .aboutB h1 {
+            margin-left: 20px;
+            font-size: 36px;
+        }
+
+        .aboutB h4 {
+            margin: 12px 0px 12px 70px;
+            font-size: 16px;
+        }
+
+        .aboutB h5 {
+            margin-left: 100px;
+            font-size: 14px;
+        }
+
+        .aboutB_img img {
+            border: solid 5px aliceblue;
+            margin: 50px;
+        }
+
+        .aboutB_bPart {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bPart_span {
+            font-size: 20px;
+            margin-left: 100px;
+        }
+
+        .bPart_btn {
+            position: absolute;
+            right: 40px;
+            bottom: 30px;
+            cursor: pointer;
+        }
+        
+        .bPart_btn a:after{
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -12px;
+            transition: 0.5s;
+        }
+        
+        .bPart_btn:hover a{
+            padding-right: 25px;
+            transition: 0.5s;
+        }
+        
+        .bPart_btn:hover a:after{
+            opacity: 1;
+            right: 0px;
+        }
+        
+        
+
+        .barLine {
+            background-color: aliceblue;
+            width: 300px;
+            height: 2px;
+            margin: 25px 60px;
+        }
+        
+        .portfolio {
+            width: auto;
+            height: 1600px;
+        }
+
+        .portfolioA {
+            background-image: url(img/portfolio1.png);
+            background-position: center;
+            width: 1600px;
+            height: 900px;
+            margin: 80px auto;
+            border: double #808A87 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .portfolioA_btn {
+            width: 200px;
+            height: 80px;
+            margin: auto auto;
+            border: solid 5px #1B2D51;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 80px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .portfolioA_btn a{
+            color: #1B2D51;
+            font-family: ch2;
+        }
+
+        .portfolioA_btn:hover {
+            background-color: #1B2D51;
+            border: solid 5px #1B2D51;
+            transition: 0.3s;
+        }
+
+        .portfolioA_btn:hover a {
+            color: aliceblue;
+            transition: 0.3s;
+        }
+
+        .portfolioA_span {
+            width: auto;
+            margin: 0px auto auto;
+            color: #4681C1;
+            font-family: US;
+            font-size: 15px;
+        }
+
     </style>
     <script>
         $.scrollingParallax('img/pic1.jpg');
+
     </script>
 </head>
 
 <body class="bodyColor">
-    <header>
-        <div class="logo">
-            <span class="logo1">ABOUT</span>
-            <span class="logo2">J</span>
+    <header id="home">
+        <div class="logoBox">
+            <div class="logo">
+                <span class="logo1">ABOUT</span><span class="logo2">J</span>
+            </div>
         </div>
         <div class="listBox">
             <ul class="list">
-                <li>Home</li>
-                <li>About</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Learning Notes</a></li>
             </ul>
         </div>
     </header>
 
     <main>
-            <div class="welcome">
-                WELCOME<br>TO ABOUTJ<br>
-                <span>Exactly What You Need</span>
-            </div>
-            <div class="asideImg">
-                <img src="img/pic1.jpg" width="100%" height="600px">
-            </div>
+        <div class="welcome">
+            <div>WELCOME<br>TO ABOUTJ<br></div>
+            <span>Exactly What You Need</span>
+        </div>
+
+        <div class="asideImg">
+            <img src="img/pic1.jpg" width="100%" height="800px">
+        </div>
     </main>
+    <article id="about" class="about">
+        <!--aboutA Start-->
+        <div class="aboutA">
+            <div class="aboutA_span"> </div>
+            <div class="aboutA_btn"><a href="#aboutB">About me</a></div>
+            <div class="aboutA_span">Understand who I am as a person</div>
+        </div>
+        <!--aboutA End-->
+        <!--aboutB_aPart Start-->
+        <div id="aboutB" class="aboutB_box">
+            <div class="aboutB">
+                <div class="aboutB_aPart">
+                    <div class="aboutB_img">
+                        <img src="img/selfa.png" height="250px">
+                    </div>
+                    <h1>林家緯</h1>
+                    <div class="barLine"></div>
+                    <h4>基本資料：</h4>
+                    <h5>27 歲</h5>
+                    <h5>國立高雄海洋科技大學 資訊管理系</h5>
+                    <h5>（100-103肄業）</h5>
+                    <h4>技能：</h4>
+                    <h5>HTML5、CSS3、JavaScript、jQuery</h5>
+                    <h5>PhotoShop、Illustrator</h5>
+                    <h4>語言：</h4>
+                    <h5>英文(略懂)、日文(普通)</h5>
+                    <div class="barLine"></div>
+                </div>
+                <!--aboutB_bPart-->
+                <div class="aboutB_bPart">
+                    <div class="bPart_span">
+                        <span>
+                            <h3>關於我</h3>
+                            <h4>1.父親開電腦公司，影響我習慣與電腦為伍的生活。</h4>
+                            <h4>2.小五遇見良師買了一整套世界文學名著，開啟我與書為伍的日常。</h4>
+                            <h4>3.高一第一次接觸程式設計VB，埋下我對程式設計的興趣。</h4>
+                            <h4>4.大二當搖滾音樂社副社長，將社團從不到10人小社團轉型到44人大型社團。</h4>
+                            <h4>5.入伍自願加入特戰，接受完整傘訓，惜因腳傷無法參與最後五次空跳。</h4>
+                            <h4>6.參加職訓局課程，愛上設計前端網頁的成就感，去書局都恨不得把所有相關書籍都帶回家。</h4>
+                        </span>
+                    </div>
+                    <div class="bPart_btn"><a href="#portfolio">Next Page</a></div>
+                </div>
+            </div>
+        </div>
+        <!--aboutB_aPart End-->
+    </article>
+    <article id="portfolio">
+        <div class="portfolioA">
+            <div class="portfolioA_span"> </div>
+            <div class="portfolioA_btn"><a href="#aboutB">作品集</a></div>
+            <div class="portfolioA_span">Understand who I am as a person</div>
+        </div>
+    </article>
+    <article id="contact">
+
+    </article>
 </body>
+
 </html>

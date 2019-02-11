@@ -1,0 +1,3 @@
+1. aboutA:  border-double吃到圖片
+2. logo動作產生下方scroll條
+3. aboutA_btn因為用A元素連結，導致只按字元以外的範圍無法跳至目的(未來可用JS解決)
