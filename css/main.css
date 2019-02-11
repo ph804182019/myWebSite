@@ -1,0 +1,29 @@
+        main {
+            background-color: #202020;
+            height: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .welcome {
+            color: #fff;
+            font-size: 80px;
+            width: 50%;
+            font-family: US;
+            text-align: center;
+        }
+
+        .welcome span {
+            font-size: 30px;
+            font-family: PC;
+            text-align: center;
+        }
+
+        .asideImg {
+            width: 50%;
+        }
+
+        div>img {
+            overflow: hidden;
+        }

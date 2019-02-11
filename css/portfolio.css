@@ -1,0 +1,52 @@
+        .portfolio {
+            width: auto;
+            height: 1600px;
+        }
+
+        .portfolioA {
+            background-image: url(../img/portfolio1.png);
+            background-position: center;
+            width: 1600px;
+            height: 900px;
+            margin: 80px auto;
+            border: double #808A87 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .portfolioA_btn {
+            width: 200px;
+            height: 80px;
+            margin: auto auto;
+            border: solid 5px #1B2D51;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 80px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .portfolioA_btn a{
+            color: #1B2D51;
+            font-family: ch2;
+        }
+
+        .portfolioA_btn:hover {
+            background-color: #1B2D51;
+            border: solid 5px #1B2D51;
+            transition: 0.3s;
+        }
+
+        .portfolioA_btn:hover a {
+            color: aliceblue;
+            transition: 0.3s;
+        }
+
+        .portfolioA_span {
+            width: auto;
+            margin: 0px auto auto;
+            color: #4681C1;
+            font-family: US;
+            font-size: 15px;
+        }

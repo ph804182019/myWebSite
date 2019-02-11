@@ -1,0 +1,133 @@
+﻿        .about {
+            width: auto;
+            
+        }
+
+        .aboutA {
+            background-image: url(../img/about1.jpg);
+            background-position: center;
+            width: 1600px;
+            height: 900px;
+            margin: 80px auto;
+            border: double #fff 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .aboutA_btn {
+            width: 200px;
+            height: 80px;
+            margin: auto auto;
+            border: solid 5px aliceblue;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 80px;
+            text-align: center;
+            font-family: PC;
+            cursor: pointer;
+        }
+
+        .aboutA_btn:hover {
+            background-color: aliceblue;
+            border: solid 5px aliceblue;
+            transition: 0.3s;
+        }
+
+        .aboutA_btn:hover a {
+            color: #112032;
+            transition: 0.3s;
+        }
+
+        .aboutA_span {
+            width: auto;
+            margin: 0px auto auto;
+            color: aliceblue;
+            font-family: US;
+            font-size: 15px;
+        }
+        
+        .aboutB_box{
+            height: 900px;
+            display: flex;
+        }
+
+        .aboutB {
+            background-color: #202020;
+            width: 1600px;
+            height: 800px;
+            margin: 80px auto;
+            display: flex;
+            align-items: center;
+            color: aliceblue;
+            font-family: ch2;
+            letter-spacing: 0.25em;
+            position: relative;
+        }
+        
+        .aboutB h1 {
+            margin-left: 20px;
+            font-size: 36px;
+        }
+
+        .aboutB h4 {
+            margin: 12px 0px 12px 70px;
+            font-size: 16px;
+        }
+
+        .aboutB h5 {
+            margin-left: 100px;
+            font-size: 14px;
+        }
+
+        .aboutB_img img {
+            border: solid 5px aliceblue;
+            margin: 50px;
+        }
+
+        .aboutB_bPart {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bPart_span {
+            font-size: 20px;
+            margin-left: 100px;
+        }
+
+        .bPart_btn {
+            position: absolute;
+            right: 40px;
+            bottom: 30px;
+            cursor: pointer;
+        }
+        
+        .bPart_btn a:after{
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -12px;
+            transition: 0.5s;
+        }
+        
+        .bPart_btn:hover a{
+            padding-right: 25px;
+            transition: 0.5s;
+        }
+        
+        .bPart_btn:hover a:after{
+            opacity: 1;
+            right: 0px;
+        }
+        
+        
+
+        .barLine {
+            background-color: aliceblue;
+            width: 300px;
+            height: 2px;
+            margin: 25px 60px;
+        }

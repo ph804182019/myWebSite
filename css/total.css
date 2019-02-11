@@ -1,0 +1,16 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*<a>去除連結底線*/
+        a,
+        a:link,
+        a:visited {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .bodyColor {
+            background-color: #000;
+        }
