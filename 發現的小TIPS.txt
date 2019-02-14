@@ -1,1 +1,9 @@
 1.Flex排版，可以利用正負margin微調位置
+
+2.使用position:absolute定位時，父元素必須為預設position: static之外的position值，否則會相對於body。
+
+3.CSS3的新單位 vh、vw - 已可視大小來決定元素大小。
+
+vmin和vmax，這個的意思是幫我抓取「長或寬較小的那個的百分比」，另一個相對的就是vmax意思就是抓取「長或寬較大的那個的百分比」。
+
+4.使用ul li時，直接拉平除了flex之外也能用float:right/left也頗方便。

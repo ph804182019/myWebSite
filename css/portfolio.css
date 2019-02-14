@@ -1,52 +1,203 @@
-        .portfolio {
-            width: auto;
-            height: 1600px;
-        }
+.portfolio {
+    width: auto;
+    height: 1600px;
+}
 
-        .portfolioA {
-            background-image: url(../img/portfolio1.png);
-            background-position: center;
-            width: 1600px;
-            height: 900px;
-            margin: 80px auto;
-            border: double #808A87 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-        
-        .portfolioA_btn {
-            width: 200px;
-            height: 80px;
-            margin: auto auto;
-            border: solid 5px #1B2D51;
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 80px;
-            text-align: center;
-            cursor: pointer;
-        }
-        
-        .portfolioA_btn a{
-            color: #1B2D51;
-            font-family: ch2;
-        }
+.portfolioA {
+    background-image: url(../img/portfolio1.png);
+    background-position: center;
+    width: 1600px;
+    height: 900px;
+    margin: 80px auto;
+    border: double #808A87 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
-        .portfolioA_btn:hover {
-            background-color: #1B2D51;
-            border: solid 5px #1B2D51;
-            transition: 0.3s;
-        }
+.pfA_btn {
+    width: 200px;
+    height: 80px;
+    margin: auto auto;
+    border: solid 5px #1B2D51;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
 
-        .portfolioA_btn:hover a {
-            color: aliceblue;
-            transition: 0.3s;
-        }
+.pfA_btn a {
+    color: #1B2D51;
+    font-family: ch2;
+}
 
-        .portfolioA_span {
-            width: auto;
-            margin: 0px auto auto;
-            color: #4681C1;
-            font-family: US;
-            font-size: 15px;
-        }
+.pfA_btn:hover {
+    background-color: #1B2D51;
+    border: solid 5px #1B2D51;
+    transition: 0.3s;
+}
+
+.pfA_btn:hover a {
+    color: aliceblue;
+    transition: 0.3s;
+}
+
+.pfA_span {
+    width: auto;
+    margin: 0px auto auto;
+    color: #4681C1;
+    font-family: US;
+    font-size: 15px;
+}
+
+.portfolioB {
+    height: 900px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pfB_h1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+.picBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*********************TAB切換CSS設定*********************/
+
+/*選到.pfB_h1之後的所有相同父元素的span*/
+.pfB_h1 ~ span {
+    display: none;
+}
+
+#tab {
+    width: 1200px;
+    background: #202020;
+    border: solid 1px #202020;
+}
+
+/* 頁籤ul */
+#tab > ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 10px 20px 0px;
+    border-bottom: solid 3px aliceblue;
+}
+
+#tab > ul > li {
+    list-style-type: none;
+}
+
+#tab > ul > li > a {
+    text-decoration: none;
+    font-size: 13px;
+    color: aliceblue;
+    float: left;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+/*頁籤div內容*/
+#tab > div {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*第一筆的底色*/
+span:target ~ #tab > ul li:first-child a {
+    color: aliceblue;
+    background: #202020;
+}
+
+span:target ~ #tab > div:first-of-type {
+    visibility: hidden;
+    height: 0;
+}
+
+/* span:target */
+#tab-1:target,
+#tab-2:target,
+#tab-3:target,
+#tab-4:target,
+#tab-5:target,
+#tab-6:target,
+#tab-7:target,
+#tab-8:target {
+    border: solid 1px red;
+}
+
+/*頁籤變換&第一筆*/
+span ~ #tab > ul li:first-child a,
+#tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+#tab-4:target ~ #tab > ul li a[href$="#tab-4"],
+#tab-5:target ~ #tab > ul li a[href$="#tab-5"],
+#tab-6:target ~ #tab > ul li a[href$="#tab-6"],
+#tab-7:target ~ #tab > ul li a[href$="#tab-7"],
+#tab-8:target ~ #tab > ul li a[href$="#tab-8"] {
+    background: #fff;
+    color: #333;
+}
+
+/*頁籤內容顯示&第一筆*/
+span ~ #tab > div:first-of-type,
+#tab-1:target ~ #tab > div.tab-content-1,
+#tab-2:target ~ #tab > div.tab-content-2,
+#tab-3:target ~ #tab > div.tab-content-3,
+#tab-4:target ~ #tab > div.tab-content-4,
+#tab-5:target ~ #tab > div.tab-content-5,
+#tab-6:target ~ #tab > div.tab-content-6,
+#tab-7:target ~ #tab > div.tab-content-7,
+#tab-8:target ~ #tab > div.tab-content-8 {
+    visibility: visible;
+    height: 800px;
+    background: #202020;
+}
+/*****************pfC*****************/
+.portfolioC {
+    height: 900px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* span:target */
+#tab2-1:target,
+#tab2-2:target,
+#tab2-3:target{
+    border: solid 1px red;
+}
+
+/*頁籤變換&第一筆*/
+span ~ #tab > ul li:first-child a,
+#tab2-1:target ~ #tab > ul li a[href$="#tab2-1"],
+#tab2-2:target ~ #tab > ul li a[href$="#tab2-2"],
+#tab2-3:target ~ #tab > ul li a[href$="#tab2-3"]{
+    background: #fff;
+    color: #333;
+}
+
+/*頁籤內容顯示&第一筆*/
+span ~ #tab > div:first-of-type,
+#tab2-1:target ~ #tab > div.tab2-content-1,
+#tab2-2:target ~ #tab > div.tab2-content-2,
+#tab2-3:target ~ #tab > div.tab2-content-3{
+    visibility: visible;
+    height: 800px;
+    background: #202020;
+}

@@ -12,6 +12,8 @@
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/about.css" rel="stylesheet" type="text/css">
     <link href="css/portfolio.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    
     <style>
         @font-face {
             font-family: US;
@@ -32,9 +34,11 @@
             font-family: ch2;
             src: url(font/SourceHanSansTC-ExtraLight.otf);
         }
+
     </style>
     <script>
         $.scrollingParallax('img/pic1.jpg');
+
     </script>
 </head>
 
@@ -50,8 +54,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#">Learning Notes</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -66,6 +69,7 @@
             <img src="img/pic1.jpg" width="100%" height="800px">
         </div>
     </main>
+    <div class="goTop"><a href="#home">TOP↑</a></div>
     <article id="about" class="about">
         <!--aboutA Start-->
         <div class="aboutA">
@@ -84,14 +88,16 @@
                     <h1>林家緯</h1>
                     <div class="barLine"></div>
                     <h4>基本資料：</h4>
-                    <h5>27 歲</h5>
-                    <h5>國立高雄海洋科技大學 資訊管理系</h5>
-                    <h5>（100-103肄業）</h5>
+                    <h5>- 27 歲</h5>
+                    <h5>- 國立高雄海洋科技大學 資訊管理系</h5>
+                    <h5> （100-103肄業）</h5>
                     <h4>技能：</h4>
-                    <h5>HTML5、CSS3、JavaScript、jQuery</h5>
-                    <h5>PhotoShop、Illustrator</h5>
+                    <h5>- HTML5、CSS3、RWD、</h5>
+                    <h5>JavaScript、jQuery</h5>
+                    <h5>- git、github</h5>
+                    <h5>- PhotoShop、Illustrator</h5>
                     <h4>語言：</h4>
-                    <h5>英文(略懂)、日文(普通)</h5>
+                    <h5>-英文(略懂)、台語(普通)、日文(普通)</h5>
                     <div class="barLine"></div>
                 </div>
                 <!--aboutB_bPart-->
@@ -99,12 +105,12 @@
                     <div class="bPart_span">
                         <span>
                             <h3>關於我</h3>
-                            <h4>1.父親開電腦公司，影響我習慣與電腦為伍的生活。</h4>
-                            <h4>2.小五遇見良師買了一整套世界文學名著，開啟我與書為伍的日常。</h4>
-                            <h4>3.高一第一次接觸程式設計VB，埋下我對程式設計的興趣。</h4>
-                            <h4>4.大二當搖滾音樂社副社長，將社團從不到10人小社團轉型到44人大型社團。</h4>
+                            <h4>1.高一第一次接觸程式設計VB，埋下我對程式設計的興趣。</h4>
+                            <h4>2.高三從統測模擬考成績不到400分的吊車尾，用122天開始的自學計畫最後考598分。</h4>
+                            <h4>3.大二當搖滾音樂社副社長，將社團從大一時還不到10人小社團經營到大三社員人數已經有44人。</h4>
+                            <h4>4.大四家裡狀況不佳，提休學回家裡幫忙工作。</h4>
                             <h4>5.入伍自願加入特戰，接受完整傘訓，惜因腳傷無法參與最後五次空跳。</h4>
-                            <h4>6.參加職訓局課程，愛上設計前端網頁的成就感，去書局都恨不得把所有相關書籍都帶回家。</h4>
+                            <h4>6.報名職訓局課程學習前端網頁設計，學習撰寫前端網頁。</h4>
                         </span>
                     </div>
                     <div class="bPart_btn"><a href="#portfolio">Next Page</a></div>
@@ -115,14 +121,94 @@
     </article>
     <article id="portfolio">
         <div class="portfolioA">
-            <div class="portfolioA_span"> </div>
-            <div class="portfolioA_btn"><a href="#aboutB">作品集</a></div>
-            <div class="portfolioA_span">Understand who I am as a person</div>
+            <div class="pfA_span"> </div>
+            <div class="pfA_btn"><a href="#portfolioB">作品集</a></div>
+            <div class="pfA_span">What I've done & what I can do</div>
+        </div>
+        <div id="portfolioB" class="portfolioB">
+            <h1 class="pfB_h1">Photoshop</h1>
+            <span id="tab-1">1</span>
+            <span id="tab-2">2</span>
+            <span id="tab-3">3</span>
+            <span id="tab-4">4</span>
+            <span id="tab-5">5</span>
+            <span id="tab-6">6</span>
+            <span id="tab-7">7</span>
+            <span id="tab-8">8</span>
+            <div id="tab">
+                <!--頁籤按鈕-->
+                <ul>
+                    <li><a href="#tab-1">Picture 1-1</a></li>
+                    <li><a href="#tab-2">Picture 1-2</a></li>
+                    <li><a>/</a></li>
+                    <li><a href="#tab-3">Picture 2-1</a></li>
+                    <li><a href="#tab-4">Picture 2-2</a></li>
+                    <li><a>/</a></li>
+                    <li><a href="#tab-5">Picture 3-1</a></li>
+                    <li><a href="#tab-6">Picture 3-2</a></li>
+                    <li><a>/</a></li>
+                    <li><a href="#tab-7">Picture 4-1</a></li>
+                    <li><a href="#tab-8">Picture 4-2</a></li>
+                </ul>
+                <!--頁籤的內容區塊-->
+                <div class="tab-content-1">
+                    <img src="img/C3.jpg" height="600px" width="1050px">
+                </div>
+                <div class="tab-content-2">
+                    <img src="img/C3_2.jpg" height="600px" width="1050px">
+                </div>
+                <div class="tab-content-3">
+                    <img src="img/F1_2.png" height="800px" width="1067px">
+                </div>
+                <div class="tab-content-4">
+                    <img src="img/F1.jpg" height="800px">
+                </div>
+                <div class="tab-content-5">
+                    <img src="img/F2.jpg" height="800px" width="1067px">
+                </div>
+                <div class="tab-content-6">
+                    <img src="img/F2_2.jpg" height="800px" width="1067px">
+                </div>
+                <div class="tab-content-7">
+                    <img src="img/idiot.jpg" height="675px" width="1200px">
+                </div>
+                <div class="tab-content-8">
+                    <img src="img/idiot_2.jpg" height="675px" width="1200px">
+                </div>
+            </div>
+        </div>
+        <div id="portfolioC" class="portfolioC">
+            <h1 class="pfB_h1">Illustrator & WEB</h1>
+            <span id="tab2-1">1</span>
+            <span id="tab2-2">2</span>
+            <span id="tab2-3">3</span>
+            
+            <div id="tab">
+                <!--頁籤按鈕-->
+                <ul>
+                    <li><a href="#tab2-1">Picture 1-1</a></li>
+                    <li><a href="#tab2-2">Picture 1-2</a></li>
+                    <li><a>/</a></li>
+                    <li><a href="#tab2-3">WEB</a></li>
+                </ul>
+                <!--頁籤的內容區塊-->
+                <div class="tab2-content-1">
+                    <img src="img/ilp_1.png" height="800px" width="826px">
+                </div>
+                <div class="tab2-content-2">
+                    <img src="img/ilp_2.png" height="400px" width="477px">
+                </div>
+                <div class="tab2-content-3">
+                    <img src="img/first_web.png" height="675px" width="1200px">
+                </div>
+            </div>
         </div>
     </article>
-    <article id="contact">
-
-    </article>
+    <footer id="footer">
+        <span>Phone：0919-284187</span>
+        <span>Email：ph804182010@gmail.com</span>
+        <span>Line：cheng80418(林家緯)</span>
+    </footer>
 </body>
 
 </html>

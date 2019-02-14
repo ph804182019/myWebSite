@@ -70,6 +70,12 @@
             font-size: 36px;
         }
 
+        .aboutB h3 {
+            margin-left: 30px;
+            margin-top: 5px;
+            font-size: 28px;
+        }
+
         .aboutB h4 {
             margin: 12px 0px 12px 70px;
             font-size: 16px;
@@ -95,6 +101,9 @@
         .bPart_span {
             font-size: 20px;
             margin-left: 100px;
+            border: double 5px crimson;
+            height: 400px;
+            width: 800px;
         }
 
         .bPart_btn {
@@ -126,7 +135,7 @@
         
 
         .barLine {
-            background-color: aliceblue;
+            background-color:aliceblue;
             width: 300px;
             height: 2px;
             margin: 25px 60px;
