@@ -1,11 +1,11 @@
 footer{
     position: relative;
-    margin-top: -20px;
+    
     display: flex;
     justify-content: space-around;
     font-size: 18px;
     height: 30px;
     background-color: #555;
     color: aliceblue;
-    font-family: ch2;
+    font-family: PC;
 }

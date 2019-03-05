@@ -37,7 +37,7 @@
 
         .logo:hover .logo1:after {
             opacity: 1;
-            right: 0px;
+            right: -10px;
             transform: scale(3, 3);
         }
 

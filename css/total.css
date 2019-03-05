@@ -16,10 +16,13 @@ a:visited {
 }
 
 .goTop{
+    background-color: dimgrey;
+    border-radius: 8px;
     position:fixed;
     right: 10px;
     bottom: 40px;
     color: aliceblue;
     font-size: 30px;
     cursor: pointer;
+    font-family: PC;
 }
